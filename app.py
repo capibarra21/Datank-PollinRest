@@ -13,5 +13,9 @@ app.config.from_object('config')
 def home():
     return render_template('index.html')
 
+@app.route('/Polls', methods=['GET'])
+def polls():
+    return render_template('Polls.html')
+
 if __name__ == '__main__':
     app.run(debug=True)

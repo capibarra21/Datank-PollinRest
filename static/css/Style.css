@@ -1,0 +1,2870 @@
+﻿.linkDotted
+{ 
+	text-decoration: none; 
+	border-bottom:1px dotted;
+}
+.linkDotted:link 
+{ 
+	color: #4C4C4C;
+}
+.linkDotted:visited 
+{ 
+	color: #4C4C4C;
+}
+.linkDotted:hover 
+{ 
+	color: black;
+}
+.linkDotted:active 
+{ 
+	color: #4C4C4C;
+}
+.divRelative
+{
+	position:relative;
+	display:inline-block;
+}
+.pTab
+{
+    width:40px;
+    display:inline-block;
+    background-color:Red;
+}
+
+body 
+{
+	/*background: #EFEFEF;*/
+	color: #4C4C4C;
+	font-family: "PT Sans", Arial;
+	font-size: 16px;
+	margin: 0;
+	padding:0;
+}
+
+#content-editor 
+{
+	border: 1px solid #CCCCCC;
+	min-height:200px;
+	width:690px;
+}
+	
+#divEditorFormatoC, #divagregausuario, #dlgLigasEquipos, #dlgUsuariosUsuariosPaginas, #dlgLigasClasificacionDeListas, #dlgTempConfiguracion
+,#dlgEquiposConfiguracion, #dlgEquiposPropContratos, #dlgJugadoresPropContratos, #dlgCuerpoTecPropContratos, #dlgPrestacionPropContratos
+, #dlIbusquedaequipo, #dlIbusquedapuestos, #dlIbusquedajugadores,#dlgConceptosLiqAcuEnt, #dlgPrestacionLiqAcue, #dlgEquiposImpLiqAcuEnt
+, #dlgShowPDFPropContImpLiqAcu, #dlgShowPDFSolMatd, #dlgEquiposAutAcuEnt, #dlgPrestacionRC, #dlgCuerpoTecRC, #dlgJugadoresContratosRC, #dlgEquiposContratosRC
+, #dlgFormatoContratoRC, #dlgFormatoContratoIC, #divaltacuerpotecnico, #dlgEquiposContratosIC, #dlgEquiposListCTporTemp, #dlgTemporadaListCTporTemp
+, #dlgTemporadasPeriodos, #dlgEquiposRLU, #dlgTiposPosicionRLU, #dlgPosicionRLU
+{
+	display:none;	
+}
+#divLogin
+{
+	margin:10% auto; 
+	width:30%;
+}
+
+#divLogin label
+{
+	display:inline-block;
+	width:100px;
+}
+
+#divLogin label
+{
+	margin-top:10px;
+}
+#divLogin fieldset
+{
+	behavior: url(Styles/pie/PIE.htc);
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+}
+#divLogin fieldset div
+{
+	margin:auto;
+	width:80%;
+}
+
+#lblUM
+{
+	display:inline-block;
+	width:28px;
+}
+#lblMonedaPyD, #lblAcumulaSaldos, #lblMonedaCE
+{
+    display:inline-block;
+	width:60px;
+}
+#lblTemporada, #lblCodigo, #lblConcepto, #lblCodigoPaisPEC, #lblCodigoEstadoPEC, #lblCodigoCiudadPEC,
+#lblPeriodos1, #lblPeriodos2, 
+#lblPeriodo1, #lblPeriodo2,
+#lblPeriodo3, #lblPeriodo4,
+#lblPeriodo5, #lblPeriodo6,
+#lblPeriodo7, #lblPeriodo8,
+#lblPeriodo9, #lblPeriodo10,
+#lblPeriodo11, #lblPeriodo12,
+#lblPeriodo13, #lblPeriodo14,
+#lblPeriodo15, #lblPeriodo16,
+#lblPeriodo17, #lblPeriodo18,
+#lblPeriodo19, #lblPeriodo20,
+#lblPeriodo21, #lblPeriodo22,
+#lblPeriodo23, #lblPeriodo24
+{
+	display:inline-block;
+	width:70px;
+}
+
+#lblMaxPrestacionesYDeducciones, #lblMaxAyudaHospedaje, #lblMaxVuelos, #lblMaxEntrenamientos, #lblPermitirLiquidarPrestaciones, #lblMaxJugadoresEntrenamientos
+{
+	display:inline-block;
+	width:500px;
+}
+
+
+#lblMarca, #lblModelo, #lblBuscar, #lblNumJugadores, #lblEquipoNuestro
+{
+	display:inline-block;
+	width:76px;
+}
+#lblNacionalidad, #lblNumJugadoresClasList, #lblLiga, .lbl80
+{
+    display:inline-block;
+	width:80px;
+}
+
+.lbl90
+{
+	display:inline-block;
+	width:90px;
+}
+.lbl300
+{
+	display:inline-block;
+	width:300px;
+}
+
+
+#lblNacionalidadEquipo, #lblClasificacion
+{
+	display:inline-block;
+	width:100px;
+}
+#lblAdmin, #lblTipoConcepto
+{
+	display:inline-block;
+	width:102px;
+}
+#lblNombreCorto, #lblPuestoTecnico, #lblAcumulaSaldos, #lblPosicionReporte, #lblEquipoNuestro, #lblTipoCatalogoPEC
+{
+    display:inline-block;
+	width:107px;
+}
+#lblPais, #lblEstado, #lblCiudad, #lblTipoAcumulacion
+{
+    display:inline-block;
+	width:132px;
+}
+#lblUsuarioUsr, #lblPasswordUsr, #lblPasswordConfirm, #lblPlazasAutorizadas, #lblTipoListaClasList, #lblEstadoPEC
+{
+    display:inline-block;
+	width:168px;
+}
+#lblTipoLista
+{
+    display:inline-block;
+	width:185px;
+}
+#lblNombreEmpleado, #lblDesLiga, #lblDescripcionPD, #lblNombreEmpleadoUSR, #lblDescripcionMed
+, #lblNombreGenerico, #lblDescripcionMAT, #lblDescripcionConceptosEmp, #lblPropietarioEquipos
+, #lblDescripcionEquipo, #lblDescripcionLigas, #lblDescripcionTemp
+{
+	display:inline-block;
+	width:258px;
+}
+#lblDescripcion, #lblNombreEmpleado, #lblDesLiga
+{
+	display:inline-block;
+	width:355px;
+}
+#lblDescripcionClasList
+{
+	display:inline-block;
+	width:308px;
+}
+#textDesLiga, #textEquipoDes, #textTemporadaDes, #textEquipoDesRLU
+{
+    padding:2px;
+	margin:1px;
+	width:220px;
+}
+
+#lblFechaFin, #lblFechaInicio
+{
+	display:inline-block;
+	width:88px;
+}
+#lblTemporada, #lblCodigo, #lblEstatus
+{
+	display:inline-block;
+	width:70px;
+}
+#lblCodigoUp
+{
+	display:inline-block;
+	width:150px;
+}
+#textDescripcion, #textNombreEmpleado, #textPropietario
+{
+	padding:2px;
+	margin:1px;
+	width:250px;
+}
+#lblPaisPEC
+{
+	display:inline-block;
+	width:168px;
+}
+#thLiga, #tdLiga, #thClasLiga, #tdClasLiga, #thTipoConcepto, #tdTipoConcepto, #thTipoAcumulacion
+, #tdTipoAcumulacion, #thTipoLista, #tdTipoLista, #thCodigoEstatus, #thPassword, #tdEstatus, #tdPassword
+, #thEsNuestro, #tdEsNuestro, #thNacionalidad, #tdNacionalidad
+{
+	display:none;
+}
+#thCodigoEquipos
+{
+    text-align:left;
+    width:55px;
+}
+#thTemporada, #thLigaD, #thCodigo, #thPuestoTecnico, #thAdmin, #thEstatus
+{
+	width:70px;
+}
+#thCiudadNacCT
+{
+    width:150px;
+}
+#thFechaNacCT
+{
+    width:70px;
+    text-align:left;
+}
+#thDelete, #thEdit, #thAgregarColumnas, #thBateaJugadores, #tLanzaJugadores, #thIDFormatoContrato, #thNacionalidadCT
+{
+	width:100px;
+}
+
+#thJugador
+{
+	width:250px;
+}
+#thPrestacion
+{
+	width:200px;
+}
+#thObservaciones
+{
+	width:220px;
+}
+#thDescripcionPre
+{
+	width:150px;
+}
+#thimporte, #thFechaInicio
+{
+	width:100px;
+}
+#thUM
+{
+	width:35px;
+	text-align:left;
+}
+#thDescripcion
+{
+	width:435px;
+}
+#thFechaFin, #thFecha, #thPaisEquipos
+{
+	width:75px;
+}
+#thClasificacion, #thMoneda, #thConcepto, #thImporte
+{
+    width:90px;
+}
+#thNombreCorto
+{
+    width:95px;
+    text-align:left;
+}
+#thNacionalidadJugadores
+{
+    width:85px;
+    text-align:left;
+}
+#thAppatJugadores, #thApmatJugadores
+{
+    width:90px;
+}
+#thPosicionJugadores
+{
+    width:90px;
+}
+#thNombreCT
+{
+    width:190px;
+}
+#thCodigoPais, #thCodigoEstado, #thCodigoCiudad
+{
+    width:100px;
+    text-align:left;
+}
+#thAdminUsr, #thTipoCatalogo
+, #thAliasJugadores
+, #thFechaNacJugadores, #thLugarNacimientoJugadores,  #thNombreJugadores, #thApellidoPaternoCT, #thApellidoMaternoCT, #thAliasCT
+{
+	width:130px;
+}
+#thFechaPropCont
+{
+	width:105px;
+}
+#thCiudad
+{
+    width:100px;
+}
+#thEstado
+{
+    width:105px;
+}
+#thPlazasAutorizadas, #thUsuario, #thPais, #thAcumulaSaldos, #thDesTipoAcumulacion, #thFormaPago, #thViajeRedondoPropCont, #thMediosPropCont
+{
+    width:130px;
+}
+#thNombreEquipos
+{
+    width:170px;
+}
+#thNombreGenerico
+{
+	width:240px;
+}
+ #thIdTipoLista
+ {
+     width:230px;
+ }
+#thNombreEmpleado, #thNombrePropietario
+{
+    width:210px;
+}
+#thDescripcionCorta
+{
+    width:330px;
+}
+#thDescripcion
+{
+	width:435px;
+}
+#thDescripcionTemp
+{
+    width:400px;
+}
+#thDescripcionLigas
+{
+	width:445px;
+}
+#thLiga, #tdLiga, #thIDColumna, #thIDColumnaEq, #tdIDColumna
+, #tdContenidoHtml, #tdIDColumnaEq, .hidden,#thIDColumnaLiqAcuEnt
+{
+	display:none;
+}
+#thNombre, #thNombreColumnas, #thNombreColumnasEq,#thNombreColumnasLiqAcuEnt
+{
+	width:300px;
+}
+#thTemporadaCat
+{
+	width:100px;
+}
+#thNumJugadores, #thPosicionReporte
+{
+	width:110px;
+	text-align:left;
+}
+#thLigaDesOculto
+{
+    width:155px;
+}
+#thUser, #thClasificacionListas
+{
+	width:150px;
+}
+#thNombrePropietarioEquipos
+{
+    width:200px;
+}
+#thPaisPEC, #thEstadoPEC, #thCiudadPEC
+{
+	width:155px;
+}
+#thDescripcionClasList
+{
+	width:400px;
+}
+#thDescripcionConcEmp, #thNombreEmpleadoUsr
+{
+	width:360px;
+}
+#thDescripcionPuestTec
+{
+	width:600px;
+}
+.btnDelete img
+{
+	width:15px !important;
+}
+.btnDeletePropCont img
+{
+	width:15px !important;
+}
+.btnEdit img, .btnEditar img, .btnEditAcomp img, .btnDeleteAcomp img, .btnEditRC img, .btnDeleteRC img, .btnDeleteAcompRC img, .btnEditAcompRC img
+{
+	width:15px !important;
+}
+.button {
+    -moz-border-radius: 3px 3px 3px 3px !important;
+    -moz-box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1) !important;
+	background-color: #52719f !important;
+    border: 1px solid #3f597f !important;
+    color: #FFFFFF !important;
+    cursor: pointer !important;
+    display: inline-block !important;
+    padding: 4px 0px 4px 0px !important;
+    text-align: center !important;
+    text-shadow: 0 -1px 0 #333333 !important;
+	width:80px !important;
+	margin:1px !important;
+}
+.button50 {
+    -moz-border-radius: 3px 3px 3px 3px !important;
+    -moz-box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1) !important;
+	background-color: #52719f !important;
+    border: 1px solid #3f597f !important;
+    color: #FFFFFF !important;
+    cursor: pointer !important;
+    display: inline-block !important;
+    padding: 4px 0px 4px 0px !important;
+    text-align: center !important;
+    text-shadow: 0 -1px 0 #333333 !important;
+	width:50px !important;
+	margin:1px !important;
+}
+.button_large 
+{
+    -moz-border-radius: 3px 3px 3px 3px !important;
+    -moz-box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1) !important;
+	background-color: #52719f !important;
+    border: 1px solid #3f597f !important;
+    color: #FFFFFF !important;
+    cursor: pointer !important;
+    display: inline-block !important;
+    padding: 4px 0px 4px 0px !important;
+    text-align: center !important;
+    text-shadow: 0 -1px 0 #333333 !important;
+	width:150px !important;
+	margin:1px !important;
+}
+#divPaises, #divEstados, #divCiudades
+{
+	display:inline-block;
+}
+.button:hover
+{
+	background-color: #5C83BD;
+}
+#textOtrasCondicionesPropCont, #textOtrasCondicionesRC
+{
+	padding:2px;
+	margin:1px;
+	width:99%;
+	height:250px;
+}
+.cajaFecha
+{
+	padding:2px;
+	margin:1px;
+	width:60px;
+}
+.cajaID
+{
+	padding:2px !important;
+	margin:1px !important;
+	width:60px !important;
+}
+.cajaTC
+{
+	padding:2px;
+	margin:1px 21px 1px 1px;
+	width:60px;
+}
+
+.caja20
+{
+	padding:2px;
+	margin:1px;
+	width:20px;
+}
+
+.caja50
+{
+	padding:2px;
+	margin:1px;
+	width:50px;
+}
+
+.caja60
+{
+	padding:2px;
+	margin:1px;
+	width:60px;
+}
+.caja65
+{
+	padding:2px !important;
+	margin:1px !important;
+	width:65px !important;
+}
+.caja70
+{
+	padding:2px;
+	margin:1px;
+	width:70px;
+}
+
+.caja75
+{
+	padding:2px;
+	margin:1px;
+	width:75px;
+}
+
+.caja80
+{
+	padding:2px;
+	margin:1px;
+	width:80px;
+}
+
+.caja90
+{
+	padding:2px;
+	margin:1px;
+	width:90px;
+}
+
+.caja100
+{
+	padding:2px;
+	margin:1px;
+	width:100px;
+}
+.caja110
+{
+	padding:2px;
+	margin:1px;
+	width:110px;
+}
+.caja105
+{
+	padding:2px;
+	margin:1px;
+	width:105px;
+}
+.caja125
+{
+	padding:2px;
+	margin:1px;
+	width:125px;
+}
+
+.caja130
+{
+	padding:2px;
+	margin:1px;
+	width:130px;
+}
+
+.caja135
+{
+	padding:2px;
+	margin:1px;
+	width:135px;
+}
+.caja160
+{
+	padding:2px;
+	margin:1px;
+	width:160px;
+}
+
+.caja200
+{
+	padding:2px;
+	margin:1px;
+	width:200px;
+}
+.caja210
+{
+	padding:2px;
+	margin:1px;
+	width:210px;
+}
+.caja250
+{
+	padding:2px;
+	margin:1px;
+	width:250px;
+}
+.caja255
+{
+	padding:2px;
+	margin:1px;
+	width:255px;
+}
+.caja300
+{
+	padding:2px !important;
+	margin:1px !important;
+	width:300px !important;
+}
+.caja350
+{
+	padding:2px !important;
+	margin:1px !important;
+	width:350px !important;
+}
+.caja360
+{
+	padding:2px !important;
+	margin:1px !important;
+	width:360px !important;
+}
+.caja400
+{
+	padding:2px !important;
+	margin:1px !important;
+	width:400px !important;
+}
+.caja405
+{
+	padding:2px !important;
+	margin:1px !important;
+	width:405px !important;
+}
+.caja500
+{
+	padding:2px !important;
+	margin:1px !important;
+	width:500px !important;
+}
+.caja590
+{
+	padding:2px !important;
+	margin:1px !important;
+	width:590px !important;
+}
+
+/*fix header*/
+.gridheadercontainer
+{
+    position:relative;
+}
+.scrolltableContainer
+{
+    max-height:400px;
+    overflow:auto;
+}
+.grid.scroll thead
+{
+   position:absolute;
+   top:-30px;
+}
+#gridJugadores thead
+{
+    position:absolute;
+    top:-45px !important;
+}
+#gridLiqAcuerdosEntrenamiento thead
+{
+    position:absolute;
+    top:-45px !important;
+}
+#gridIngresaCT thead
+{
+    position:absolute;
+    top:-45px !important;
+}
+#gridImpPropContratos thead
+{
+    position:absolute;
+    top:-45px !important;
+}
+#gridAutContratos thead
+{
+    position:absolute;
+    top:-45px !important;
+}
+#gridImprimirContratos thead
+{
+    position:absolute;
+    top:-40px !important;
+}
+#gridImpPropContratos tbody tr
+{
+    font-size:10px !important;
+}
+#gridAutContratos tbody tr
+{
+    font-size:10px !important;
+}
+.td20px
+{
+    max-height:20px;    
+    max-width:20px;
+    overflow:hidden;
+    width:20px;
+}
+.td30px
+{
+    max-height:20px;    
+    max-width:30px;
+    overflow:hidden;
+    width:30px;
+}
+.td35px
+{
+    max-height:20px;    
+    max-width:35px;
+    overflow:hidden;
+    width:35px;
+}
+.td50px
+{
+    max-height:20px;    
+    max-width:50px;
+    overflow:hidden;
+    width:50px;
+}
+.td55px
+{
+    max-height:20px;
+    max-width:55px;
+    overflow:hidden;
+    width:55px;
+}
+.td60px
+{
+    max-height:20px;    
+    max-width:60px;
+    overflow:hidden;
+    width:60px;
+}
+.td70px
+{
+    max-height:20px;    
+    max-width:70px;
+    overflow:hidden;
+    width:70px;
+}
+.td75px
+{
+    max-height:20px;    
+    max-width:75px;
+    overflow:hidden;
+    width:75px;
+}
+.td80px
+{
+    max-height:20px;    
+    max-width:80px;
+    overflow:hidden;
+    width:80px;
+}
+.td85px
+{
+    max-height:20px;    
+    max-width:85px;
+    overflow:hidden;
+    width:85px;
+}
+.td90px
+{
+    max-height:20px;    
+    max-width:90px;
+    overflow:hidden;
+    width:90px;
+}
+.td95px
+{
+    max-height:20px;    
+    max-width:95px;
+    overflow:hidden;
+    width:95px;
+}
+.td100px
+{
+    max-height:20px;    
+    max-width:100px;
+    overflow:hidden;
+    width:100px;
+}
+.td105px
+{
+    max-height:20px;    
+    max-width:105px;
+    overflow:hidden;
+    width:105px;
+}
+.td110px
+{
+    max-height:20px;    
+    max-width:110px;
+    overflow:hidden;
+    width:110px;
+}
+.td120px
+{
+    max-height:20px;    
+    max-width:120px;
+    overflow:hidden;
+    width:120px;
+}
+.td130px
+{
+    max-height:20px;    
+    max-width:130px;
+    overflow:hidden;
+    width:130px;
+}
+.td135px
+{
+    max-height:20px;    
+    max-width:135px;
+    overflow:hidden;
+    width:135px;
+}
+.td140px
+{
+    max-height:20px;    
+    max-width:140px;
+    overflow:hidden;
+    width:140px;
+}
+.td150px
+{
+    max-height:20px;    
+    max-width:150px;
+    overflow:hidden;
+    width:150px;
+}
+.td155px
+{
+    max-height:20px;    
+    max-width:155px;
+    overflow:hidden;
+    width:155px;
+}
+.td160px
+{
+    max-height:20px;    
+    max-width:160px;
+    overflow:hidden;
+    width:160px;
+}
+.td170px
+{
+    max-height:20px;    
+    max-width:170px;
+    overflow:hidden;
+    width:170px;
+}
+.td180px
+{
+    max-height:20px;    
+    max-width:180px;
+    overflow:hidden;
+    width:180px;
+}
+.td190px
+{
+    max-height:20px;    
+    max-width:190px;
+    overflow:hidden;
+    width:190px;
+}
+.td200px
+{
+    max-height:20px;    
+    max-width:200px;
+    overflow:hidden;
+    width:200px;
+}
+.td210px
+{
+    max-height:20px;    
+    max-width:210px;
+    overflow:hidden;
+    width:210px;
+}
+.td230px
+{
+    max-height:20px;    
+    max-width:230px;
+    overflow:hidden;
+    width:230px;
+}
+.td240px
+{
+    max-height:20px;    
+    max-width:240px;
+    overflow:hidden;
+    width:240px;
+}
+.td250px
+{
+    max-height:20px;    
+    max-width:250px;
+    overflow:hidden;
+    width:250px;
+}
+.td260px
+{
+    max-height:20px;    
+    max-width:260px;
+    overflow:hidden;
+    width:260px;
+}
+.td295px
+{
+    max-height:20px;    
+    max-width:295px;
+    overflow:hidden;
+    width:295px;
+}
+.td300px
+{
+    max-height:20px;    
+    max-width:300px;
+    overflow:hidden;
+    width:300px;
+}
+.td305px
+{
+    max-height:20px;    
+    max-width:305px;
+    overflow:hidden;
+    width:305px;
+}
+.td325px
+{
+    max-height:20px;    
+    max-width:325px;
+    overflow:hidden;
+    width:325px;
+}
+.td350px
+{
+    max-height:20px;    
+    max-width:350px;
+    overflow:hidden;
+    width:350px;
+}
+.td360px
+{
+    max-height:20px;    
+    max-width:360px;
+    overflow:hidden;
+    width:360px;
+}
+.td395px
+{
+    max-height:20px;    
+    max-width:395px;
+    overflow:hidden;
+    width:395px;
+}
+.td400px
+{
+    max-height:20px;    
+    max-width:400px;
+    overflow:hidden;
+    width:400px;
+}
+.td410px
+{
+    max-height:20px;    
+    max-width:410px;
+    overflow:hidden;
+    width:410px;
+}
+.td430px
+{
+    max-height:20px;    
+    max-width:430px;
+    overflow:hidden;
+    width:430px;
+}
+.td435px
+{
+    max-height:20px;    
+    max-width:435px;
+    overflow:hidden;
+    width:435px;
+}
+.td445px
+{
+    max-height:20px;    
+    max-width:445px;
+    overflow:hidden;
+    width:445px;
+}
+.td600px
+{
+    max-height:20px;    
+    max-width:600px;
+    overflow:hidden;
+    width:600px;
+}
+
+#divContainerTableCatTemp
+{
+    width:705px;
+}
+#divContainerTableCatLigas
+{
+    width:692px;
+}
+#divContainerTableCatEquipos
+{
+    width:1000px;
+}
+#divContainerTableClasificacionListas
+{
+    width:955px;
+}
+#divContainerTableCatPuestoTec
+{
+    width:825px;
+}
+#divContainerTableCatPrestDeduc
+{
+    width:920px;
+}
+#divContainerTableCatConceptos
+{
+    width:975px;
+}
+#divContainerTableCatPaisesEstadosCiu
+{
+    width:935px;
+}
+#divContainerTableCatMaterialDeportivo
+{
+    width:873px;
+}
+#divContainerTableCatMedicamentos
+{
+    width:810px;
+}
+#divContainerTableCatSelectJugAEnt
+{
+    width:800px;
+}
+#divContainerTableCatEnvCartasEnt
+{
+    width:885px;
+}
+#gridAcuerdosEntrenamiento tbody tr
+{
+    font-size:10px !important;
+}
+#gridAutAcuerdosEntrenamiento tbody tr
+{
+    font-size:10px !important;
+}
+#gridLiqAcuerdosEntrenamiento tbody tr
+{
+    font-size:10px !important;
+}
+#divContainerTableIngresaCT
+{
+    width:890px;
+}
+#divContainerTableImpContratos
+{
+     width:975px;
+}
+#divContainerTableSalPrestDeduc
+{
+    width:870px;
+}
+#divContainerTableCapMovExtr
+{
+    width:895px;
+}
+#divContainerTableExtraorCapMovExtr
+{
+    width:895px;
+}
+#divContainerTableSolMD
+{
+    width:835px;
+}
+#divContainerTableSolMED
+{
+    width:835px;
+}
+#divContainerTableUsuarios
+{
+    width:885px;
+}
+/*Fix header*/
+
+.grid table{
+	border-collapse: collapse;
+	padding:0;
+}
+
+.grid thead tr{
+	background-color: #52719f;
+	color: #FFFFFF;   
+    font-weight: bold;
+	height: 25px;
+	text-align:center;
+}
+
+.grid tbody tr{
+	text-align:left;
+    font-size: 11px;
+	height:25px;
+}
+
+
+.grid tbody tr:nth-child(odd) td {
+    background-color: #D1DCFF;
+}
+
+.grid tbody tr:hover{
+	background-color: #CCC;
+}
+
+.grid td a:link, th a:link{
+	color: black;
+}
+
+.grid td a:visited, th a:visited{
+	color: black;
+	text-decoration: line-through;
+}
+
+td a:hover, th a:hover{
+	color: purple;
+	text-decoration: underline;
+}
+
+.grid td:last-child a:hover{
+	color: red;
+	text-decoration: underline overline;
+}
+
+.grid td, th{
+	border: 1px dotted #CCCCCC;
+}
+
+.grid td img { padding:2px;}
+
+.labelJugadores
+{
+	color: #4C4C4C;
+	font-weight:normal;
+	font-family: "PT Sans", Arial;
+	display:inline-block !important;
+	width:150px !important;
+	margin-left:10px;
+}
+.labelJugadores160
+{
+	color: #4C4C4C;
+	font-weight:normal;
+	font-family: "PT Sans", Arial;
+	display:inline-block !important;
+	width:160px !important;	
+	margin-left:10px;
+}
+.labelJugadores110
+{
+	color: #4C4C4C;
+	font-weight:normal;
+	font-family: "PT Sans", Arial;
+	display:inline-block !important;
+	width:110px !important;
+	margin-left:10px;
+}
+.labelJugadores110Margin70
+{
+	color: #4C4C4C;
+	font-weight:normal;
+	font-family: "PT Sans", Arial;
+	display:inline-block !important;
+	width:110px !important;
+	margin-left:70px;
+}
+.textJugadores
+{
+	margin-left:10px;
+	margin: 5px 10px 0 0;
+}
+.textJugadores50, .textCuerpoTecnico50
+{
+	margin-left:10px;
+	margin: 5px 10px 0 0;
+	width:50px;
+}
+.textCuerpoTecnico30
+{
+	margin-left:10px;
+	margin: 5px 10px 0 0;
+	width:30px;
+}
+.textJugadoresCombo
+{
+	margin-top:10px;
+	margin-bottom:0px;
+}
+
+#textPosicionesJugador
+{
+	cursor:pointer;
+	cursor:hand;
+	margin-top:10px;
+	margin-bottom:0px;
+	background-color:White;
+}
+
+#divPosicionesJugadores
+{
+	display:none;
+	width:216px;
+	height:150px;
+	background-color:White;
+	margin-left:560px;
+	overflow:auto;
+	position:absolute;
+}
+#buttonDropDown
+{
+	display:inline-block;
+	border: 1px solid black;
+	width:15px;
+	height:15px;
+	text-align:center;
+	position: absolute;
+    right: 5px;
+    top:15px;
+}
+#buttonDropDown img
+{
+	width:10px;
+	height:10px;	
+}
+#gridHijosJugadores
+{
+	margin-left:165px;
+	width:500px;
+	max-width:500px;
+	background-color:White;
+}
+#gridViajesAcompanantes
+{
+	width:835px;
+}
+#thNombreHijosJugadores
+{
+	width:300px;
+	max-width:300px;
+}
+#thFechaNacHijosJugadores
+{
+	width:130px !important;
+	max-width:130px !important;
+}
+
+#thEdadHijosJugadores
+{
+	width:70px;
+	max-width:50px;
+}
+#texnomesposa, #texnompadre, #textnomadre
+{
+	width:435px;
+}
+#divFotografiaJugadores, #divFotografiaCuerpoTecnico
+{
+	position:absolute;
+	border: 1 solid black;
+	background-color:White;
+	width:100px;
+	height:100px;
+	top:70px;
+	right:70px;
+	border: 1px solid;
+}
+#divBtnUploadJugadores, #divBtnUploadCuerpoTecnico
+{
+	position:absolute;
+	top:175px;
+	right:70px; 
+	width: 100px;
+}
+#divBtnUploadJugadores:hover
+{
+	cursor:pointer;
+	cursor:hand;
+}
+#divBtnUploadJugadores input:hover
+{
+	cursor:pointer;
+	cursor:hand;
+}
+#divJugadoresTopLeft, #divJugadoresTopLeftRC
+{
+	display:inline-block;
+	width:300px;
+	vertical-align:top;
+}
+#divJugadoresTopRigth, #divJugadoresTopRigthRC
+{
+	display:inline-block;
+	vertical-align:top;
+}
+
+#btnUploadJugadores, #btnUploadCuerpoTecnico
+{
+	height: 32px; 
+	width: 100px;
+}
+
+.textCuerpoTecnico
+{
+    width:200px;
+    margin:5px 10px 0 0;
+}
+.cboCuerpoTecnico
+{
+    width:210px;
+    margin:5px 10px 0 0;
+}
+.labelCuerpoTecnico
+{
+    width:160px;
+    display:inline-block;
+}
+.labelCuerpoTecnico95
+{
+    width:95px;
+    display:inline-block;
+}
+.labelCuerpoTecnico147
+{
+    width:147px;
+    display:inline-block;
+}
+.labelCuerpoTecnico85
+{
+    width:85px;
+    display:inline-block;
+}
+.labelCuerpoTecnico65
+{
+    width:65px;
+    display:inline-block;
+}
+.labelnumeroInterior
+{
+	 width:90px;
+	 margin-left:10px;
+     display:inline-block;
+}
+
+
+.labelGeneral60
+{
+	display:inline-block;
+	 width:60px;
+}
+
+.labelGeneral70
+{
+	display:inline-block;
+	 width:70px;
+}
+.labelGeneral80
+{
+	display:inline-block;
+	 width:80px;
+}
+.labelGeneral100
+{
+	display:inline-block;
+	 width:100px;
+}
+.labelGeneral110
+{
+	display:inline-block;
+	 width:110px;
+}
+.labelGeneral120
+{
+	display:inline-block;
+	 width:120px;
+}
+.labelGeneral135, #lbltextautorizomov
+{
+	display:inline-block;
+	 width:135px;
+}
+.labelGeneral140
+{
+	display:inline-block;
+	 width:140px;
+}
+.labelGeneral147
+{
+	display:inline-block;
+	 width:147px;
+}
+.labelGeneral155
+{
+	display:inline-block;
+	 width:155px;
+}
+.labelGeneral160
+{
+	display:inline-block;
+	 width:160px;
+}
+.labelGeneral150
+{
+	display:inline-block;
+	 width:150px;
+}
+.labelGeneral185
+{
+	display:inline-block;
+	 width:185px;
+}
+.labelGeneral200
+{
+	display:inline-block;
+	 width:200px;
+}
+.labelGeneral240
+{
+	display:inline-block;
+	 width:240px;
+}
+.labelGeneral210
+{
+	display:inline-block;
+	 width:210px;
+}
+.labelGeneral250
+{
+	display:inline-block;
+	 width:250px;
+}
+.labelGeneral260
+{
+	display:inline-block;
+	 width:260px;
+}
+.labelGeneral300
+{
+	display:inline-block;
+	 width:300px;
+}
+.labelGeneral310
+{
+	display:inline-block;
+	 width:310px;
+}
+.labelGeneral400
+{
+	display:inline-block;
+	 width:400px;
+}
+
+/*Estilos para control de campos para el contrato */
+
+.vN {
+    background-color: #D1DCFF;
+    border: 1px solid #D9D9D9;
+    border-radius: 3px 3px 3px 3px;
+    cursor: default;
+    display: inline-block;
+    height: 17px;    
+    position:relative;
+}
+.vT {
+    color: #222222;
+    direction: ltr;
+    display: inline-block;
+    margin: 0px 5px;
+    max-height: 15px;
+    max-width: 325px;
+    margin-right:15px;
+    overflow: hidden;
+}
+.vM {
+    background: url("../images/contactarea_sprite_2.gif") no-repeat scroll -4px 0 rgba(0, 0, 0, 0);
+    cursor: pointer;
+    display: inline-block;
+    height: 15px;
+    opacity: 0.6;
+    vertical-align: top;
+    width: 14px;
+    position:absolute;
+    top:0px;
+    right:0px;
+}
+
+#content-editor pre {
+  border: 1px solid black;
+  border: 1px solid rgba(0, 0, 0, 1);
+  font-family:Arial, Helvetica, sans-serif;
+  font-size:11px; /**/
+}
+/*********************************************/
+
+
+
+/* Estilos Ricardo */
+#lblFecha, #lblEquipo, #lblStatusActual, #lblFechaAR, #lblJugadorIngJug, #lblAnio
+{
+	display:inline-block;
+	width:60px;
+}
+#lblFechaSalioLP, #lblFechaRegresaLP, #lblTipoLP, #lblAtendidoPorLP, #lblEquipoPS, #lblFechaSalioPS,
+#lblFechaRegresaPS
+{
+    display:inline-block;
+    text-align:right;
+	width:85px;
+}
+#lblClasLista
+{
+    display:inline-block;
+	width:90px;
+}
+#lblClasificacionActual, #lblAutorizo, #lblCapturo, #lblSaldoInicial, #lblSaldoFinal, #lblDescuento, #lblMoneda
+{
+    display:inline-block;
+	width:90px;
+}
+#lblEstatus
+{
+    display:inline-block;
+	width:82px;
+	text-align:right;
+}
+#lblEstatusActual, #lblCEClasificacionActual
+{
+    display:inline-block;
+	width:100px;
+}
+#lblEstatusNuevo
+{
+    display:inline-block;
+	width:100px;
+	font-weight:bold;
+}
+#lblNombreJugador
+{
+	display:inline-block;
+	width:130px;
+}
+#lblFechaBA, #lblMotivoBA
+{
+    display:inline-block;
+    text-align:right;
+	width:130px;
+}
+#lblTipoEmpleado
+{
+    display:inline-block;
+	width:132px;
+}
+#lblConceptoID
+{
+    display:inline-block;
+	width:155px;
+}
+#lblFechaAdq, #lblTipoListaIngJug, #lblViaIngreso, #lblTipoCambioLiq
+{
+    display:inline-block;
+	width:140px;
+	text-align:right;
+}
+#lblFechaReg
+{
+	display:inline-block;
+	width:230px;
+	text-align:right;
+}
+#lblConceptoDes
+{
+    display:inline-block;
+	width:228px;
+}
+#lblClasificacionActualEdit, #lblStatusActualEdit
+{
+    display:inline-block;
+	width:250px;
+}
+.caja88
+{
+    padding:2px;
+	margin:1px;
+	width:83px;
+}
+
+.cajaFechaEspacio
+{
+	padding:2px;
+	margin:1px 1px 1px 1px;
+	width:80px;
+}
+
+.caja175
+{
+	padding:2px;
+	margin:1px;
+	width:175px;
+}
+
+.caja253
+{
+	padding:2px;
+	margin:1px;
+	width:253px;
+}
+
+.caja335
+{
+    padding:2px;
+	margin:1px;
+	width:335px;
+}
+
+.tituloDialogo
+{
+    font-size:medium;
+    color:Black;
+    text-align:center;
+}
+
+.lblleft
+{
+    text-align:left;
+}
+
+#textClasListaDes, #textEquipoDesPS, #textConceptoDes, #textEquipoPresDes
+{
+    padding:2px;
+	margin:1px;
+	width:220px;
+}
+#textDesCorreoBase
+{
+    padding:2px;
+	margin:8px;
+	width:776px;
+	height:380px;
+	border: 1px solid #000000;
+	text-align: left;
+}
+#textAutorizo, #textCapturo
+{
+    padding:2px;
+	margin:1px;
+	width:350px;
+}
+#cboCambiarEstatus
+{
+    padding:2px;
+	margin:1px;
+	width:383px;
+}
+#textNombreJugador
+{
+    padding:2px;
+	margin:1px;
+	width:560px;
+}
+#dlgClasListasCambioDeEstatus, #dlgEquiposCambioDeEstatus, #dlgConceptosSalPrestDeduc, #dlgEquiposPrestamoCambioDeEstatus, #dlgMailCambioDeEstatus, #dlgFechaReactivacionPagoCambioDeEstatus, #dlgEquiposIngresarJugadores, #dlgClasListasIngresarJugadores, #dlgEquiposPresIngresarJugadores
+,#dlgTemporadaImpPropContratos, #dlgEquiposImpPropContratos, #dlgEquiposAutPropContratos, #dlgTemporadaAutPropContratos,#dlgEquiposAcuEnt,#dlgPrestacionAcuEnt,#dlgEquiposLiqAcuEnt, #dlgTemporadaImpContratos, #dlgProductosMacolaMedicamentos, #dlgProductosMacolaMaterialDeportivo
+,#dlgConceptosCfg
+{
+	display:none;
+}
+#fdsViaIngreso
+{
+    height: 50px;
+    margin: 10px 0px 10px 0px !important;
+}
+#fdsGeneral
+{
+    height: 214px;
+    margin: 10px 0px 10px 0px !important;
+}
+#divEstatusActual
+{
+    border:1px solid black;
+    margin: 10px 0px 10px 0px !important;
+    padding: 10px 0px 10px 10px;
+    background-color:#F6CEEC;
+    width:677px;
+}
+#tdIDColumnaEqPrestamo, #thIDColumnaEqPrestamo, #tdIdSaldosPrestacionesDeducciones, #tdTipoConcepto, #tdCodigoConcepto, #thIDColumnaEqPres, #tdIDColumnaEqPres
+{
+    display:none;
+}
+#thModuloPagina, #thCodigoModulo, #thModulo, #thCodigoPagina, #thCodigoPagina
+{
+    width:120px;
+}
+#thSaldoInicial, #thSaldoFinal, #thDescuento
+{
+    width:100px;
+}
+#thDesTipoConcepto
+{
+	width:140px;
+}
+#thNombreColumnasEqPrestamo, #thNombreColumnasEqPres
+{
+	width:300px;
+}
+#thDescripcionPetDeduc
+{
+	width:305px;
+}
+#divEstatusJugador
+{
+    position:relative;
+}
+#divFotoJugador
+{
+    position:absolute;
+    top:10px;
+    right:100px;
+}
+/* Termina Ricardo */
+
+/* tables */
+
+
+table thead tr .headerTS {
+	background-image: url(../images/bg.gif);
+	background-repeat: no-repeat;
+	background-position: center right;
+	cursor: pointer;
+}
+table thead tr .headerSortUp {
+	background-image: url(../images/asc.gif);
+}
+table thead tr .headerSortDown {
+	background-image: url(../images/desc.gif);
+}
+
+table tr .headerTS
+{
+	cursor:hand;
+	cursor:pointer;		
+}
+table tr .headerSortUp
+{
+	cursor:hand;
+	cursor:pointer;		
+}
+table tr .headerSortDown
+{
+	cursor:hand;
+	cursor:pointer;		
+}
+
+.ulListaSeleccionados, .ulListaSeleccionados li
+{
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+}
+
+.ulListaSeleccionados li:hover
+{
+	color: #ffff00;
+	background-color: #003366;
+}
+
+
+.divCheckBoxes label
+{
+	font:normal 14px Arial,sans-serif;
+	padding:5px;		
+}
+
+.headerGrid
+{
+	display:inline;
+	background-color:#659CCF;
+	color:White;
+}
+.headerGridNone
+{	
+	display:none;
+	background-color:#659CCF;
+	color:White;
+}
+
+.rowGridNone
+{	
+	display:none;
+}
+
+/* ricardo estilos */
+
+#lblEquipoPredeterminado
+{
+ display:inline-block;
+ width:387px;
+}
+
+#lblCambiarEquipo
+{
+ display:inline-block;
+ width:300px;
+}
+
+#lblAnioPres, #lblStatus
+{
+    display:inline-block;
+ width:60px;
+}
+
+.caja470
+{
+    padding:2px;
+ margin:1px;
+    height: 109px;
+    width: 470px;
+}
+
+#divContratos, #divEntrenamientos, #divCorreo, #divConexionMacola, #divConceptosNomina
+{
+    border:1px solid black;
+    margin: 0 !important;
+    padding: 10px 0px 10px 10px;
+    width:700px;
+}
+
+#dlIbusquedaProducuctosolmatdepor, #dlIbusquedanomsol, #dlIbusquedaProveedores
+{
+	display:none;	
+}
+#span_checartodos_acuerdos
+{
+    /*text-align:right;
+    display:inline-block;
+    width:700px;*/
+    float:right;
+    margin-right:50px;   
+}
+
+#labelGeneral40LiqAcuEnt
+{
+    
+    display:inline-block;
+	 width:50px; 
+	 margin-left:50px;   
+    
+}
+#labelGeneralTipoCambioLiqAcuEnt
+{
+
+	 margin-left:50px;   
+     
+}
+
+
+#labelTecnicoRegEva
+{
+	  width: 80px;  
+}
+
+#labelPosicionRegEva
+{
+    margin-left:50px;     
+}
+.caja40
+{
+	padding:2px;
+	margin:1px;
+	width:40px;
+}
+#TextareaRegEva
+{
+     width:730px;
+     resize:none !important;
+}
+#textObservacionesCT
+{
+    width:99% !important;
+    resize:none !important;
+}
+
+.labelGeneral100ImpLiqEntre
+{
+     margin-left:70px;
+    display:inline-block;
+	width:80px;
+}
+
+/* ricardo estilos Movimientos Extraordinarios y mas */
+
+#lblPeriodo
+{
+    display:inline-block;
+    width:50px;
+}
+.cajaPeriodoMovExt {
+    margin: 1px 15px 1px 1px !important;
+    padding: 2px !important;
+    width: 60px !important;
+}
+.cajaFechaMovExt {
+    margin: 1px 15px 1px 1px;
+    padding: 2px;
+    width: 80px;
+}
+#lblFechaInicial
+{
+    display:inline-block;
+    width:80px;
+}
+
+#lblFechaFinal
+{
+    display:inline-block;
+    width:80px;
+}
+#lblTipoCambio
+{
+    display:inline-block;
+    width:80px;
+}
+#lblDiasCME
+{
+    display:inline-block;
+    width:60px;
+}
+#lblImporte
+{
+    display:inline-block;
+    width:90px;
+}
+.caja560
+{
+    padding:2px;
+ margin:1px;
+ width:560px;
+}
+.caja220
+{
+    padding:2px;
+ margin:1px;
+ width:220px;
+}
+#dlgConceptosCapMovExtr
+{
+ display:none; 
+}
+
+#lblSolicitud, #lblProveedor
+{
+    display:inline-block;
+    width:80px;
+}
+#lblFechaSolMD, #lblFechaRecMD, #lblFechaSolMed
+{
+    display:inline-block;
+    width:100px;
+    text-align:right;
+}
+#lblEstatusSolMD, #lblEstatusRecMD, #lblEstatusSolMed
+{
+    display:inline-block;
+    width:83px;
+    text-align:right;
+}
+#lblProducto
+{
+    display:inline-block;
+    width:155px;
+}
+#lblProductoDesSMD, #lblProductoDesSM
+{
+	display:inline-block;
+    width:330px;
+}
+.caja30
+{
+    padding:2px;
+ margin:1px;
+ width:30px;
+}
+.caja115
+{
+    padding:2px;
+ margin:1px;
+ width:115px;
+}
+.caja280
+{
+    padding:2px;
+ margin:1px;
+ width:280px;
+}
+.th10
+{
+ width:10px;
+}
+.th20
+{
+    width:20px !important;
+    text-align:left;
+}
+.th30
+{
+    width:30px !important;
+    text-align:left;
+}
+.th40
+{
+ width:40px;
+}
+.th50
+{
+    width:50px !important;
+    text-align:left;
+}
+.th60
+{
+ width:60px !important;
+ text-align:left;
+}
+.th70
+{
+    width:70px !important;
+    text-align:left;
+}
+.th80
+{
+    width:80px !important;
+    text-align:left;
+}
+.th100
+{
+    width:100px !important;
+    text-align:left;
+}
+.th110
+{
+ width:110px;
+}
+.th120
+{
+    width:120px !important;
+}
+.th140
+{
+ width:140px !important;
+}
+.th150
+{
+    width:150px !important;
+}
+.th165
+{
+ width:165px;
+}
+.th170
+{
+    width:170px !important;
+}
+.th85
+{
+    width:85px !important;
+}
+.th200
+{
+ width:200px !important;    
+}
+.th210
+{
+ width:210px !important;    
+}
+.th240
+{
+ width:240px;    
+}
+.th250
+{
+ width:250px !important;
+}
+.th260
+{
+ width:260px;    
+}
+.th300
+{
+ width:300px !important;
+}
+.th305
+{
+    width:305px !important;
+}
+.th360
+{
+ width:360px !important;
+}
+#gridJugadores tbody
+{
+    font-size:9px;
+}
+#lblEquipoCME
+{
+    display:inline-block;
+    width:50px;
+}
+#lblTipoConceptoCME
+{
+    display:inline-block;
+    width:133px;
+}
+#lblCantidadSolicitada, #lblPrecioUnitario, #lblFechaRegCMENE
+{
+    display:inline-block;
+    width:122px;
+}
+#dlgEquiposSalPrestDeduc, #dlgEquiposCapMovExtr, #dlgProveedoresSolMD, #dlgProductosSolMD, #dlgProveedoresSolMed, #dlgProductosSolMed, #dlgSolicitaFechaDesautPropCont
+, #dlgConceptosExtraorCapMovExtr, #dlgEquiposExtraorCapMovExtr
+{
+ display:none; 
+}
+#textCondicionesPS, #textCondicionesLP
+{
+    height: 60px;
+    width: 459px;
+}
+.caja550 {
+    margin: 1px;
+    padding: 2px;
+    width: 550px;
+}
+#lblStatusCamEst {
+    display: inline-block;
+    width: 90px;
+}
+#fdsGeneral
+{
+    width: 800px;
+}
+/* terminan estilos Movimientos Extraordinarios */
+
+.thGeneral80
+{
+	width:80px;
+}
+.thGeneral60
+{
+	width:60px;
+}
+.thGeneral140
+{
+	width:140px;
+}
+.thGeneral150
+{
+	width:150px;
+}
+.thGeneral160
+{
+	width:160px;
+}
+.thGeneral200
+{
+	width:200px;
+}
+.thGeneral335
+{
+	width:335px;
+}
+/*Estilos Correcciones */
+.caja376 {
+    margin: 1px;
+    padding: 2px;
+    width: 376px;
+}
+
+#lblStatusIngJug {
+    display: inline-block;
+    width: 90px;
+}
+
+#fdsInfAdquisicion {
+    margin: 10px 0 !important;
+}
+
+#textEquipoDesIngJug {
+    margin: 1px;
+    padding: 2px;
+    width: 403px;
+}
+
+#textAutorizoIngJug {
+    margin: 1px;
+    padding: 2px;
+    width: 482px;
+}
+
+.caja622 {
+    height: 109px;
+    margin: 1px;
+    padding: 2px;
+    width: 622px;
+}
+.caja410 {
+    margin: 1px !important;
+    padding: 2px !important;
+    width: 410px !important;
+}
+/*Termian Estilos Correcciones */
+
+.labelGeneral205
+{
+	display:inline-block;
+	 width:205px;
+}
+#thPrestacionDes
+{
+	width:250px;
+}
+
+
+#lblFechaRecMed
+{
+    display:inline-block;
+    width:100px;
+    text-align:right;
+}
+
+#lblEstatusRecMed
+{
+    display:inline-block;
+    width:83px;
+    text-align:right;
+}
+
+#thCodigoSolMed, #thUMSolMed, #thCodigoSolMD, #thUMSolMD, #thCodigoRecMD, #thUMRecMD, #thCodigoRecMed, #thUMRecMed
+{
+	width:75px;
+}
+
+ #thDescripcionSolMed, #thDescripcionSolMD, #thDescripcionRecMD, #thDescripcionRecMed
+ {
+    width:350px; 
+ }
+ 
+ #thCantidadSolicitadoSolMed, #thPrecioUnitarioSolMed, #thCantidadSolicitadoSolMD, #thPrecioUnitarioSolMD, #thCantidadSolicitadoRecMD, #thCantidadRecibidaRecMD, #thCantidadSolicitadoRecMed, #thCantidadRecibidaRecMed
+ {
+    width:150px; 
+ }
+ 
+ #dlgSolicitudesSolMed, #dlgSolicitudesSolMD, #dlgSolicitudesRecMD, #dlgSolicitudesRecMed, #dlgEquiposListJugadoresEquipo
+ {
+    display:none; 
+ }
+ 
+ #lblTemporadaSJE, #lblTemporadaECE
+{
+ display: inline-block;
+ width: 70px;    
+}
+
+#lblnombreSJE
+{
+ display: inline-block;
+ width:310px;
+
+}
+ #lblestatusSJE
+ {
+ display: inline-block;
+ width:110px;
+
+ }
+#lblFechaSJEL, #lblFechaSJER
+{
+    display:inline-block;
+    width: 110px;
+  
+}
+#dlgEquiposSJE, #dlgTemporadaSJE, #dlgEquiposECE
+{
+	display:none;
+}
+
+.FielsetRegEva
+{
+    display:inline-block;
+    width:370px;
+    
+}
+#labelGeneral80RegEva
+{
+     display: inline-block;
+      width:80px;
+}
+.labelGeneral90
+{
+  display: inline-block;
+  width:90px;
+}
+.labelGeneral85
+{
+  display: inline-block;
+  width:85px;
+}
+ .thGeneral150
+ {
+    width:150px; 
+ }
+ .thGeneral100
+ {
+    width:100px; 
+ }
+
+.caja920 {
+    height: 140px;
+    margin: 1px;
+    padding: 2px;
+    width: 900px;
+}
+
+#fdsInfAdquisicion {
+    margin: 10px 0 !important;
+    width:900px;
+}
+
+#fdsViaIngreso
+{
+    height: 50px;
+    margin: 10px 0 !important;
+    width:900px;
+}
+#tdIDclasLista
+{
+
+ width:50px;    
+}
+
+#divFotoJugador
+{
+    position:absolute;
+    top:10px;
+    right:160px;
+}
+
+#divtipo
+{
+    margin-left:100px;
+}
+
+.caja372 {
+    margin: 1px;
+    padding: 2px;
+    width: 372px;
+}
+
+#lblCorreoLiga
+{
+    text-align:right;
+    display:inline-block;
+	width:120px;
+}
+
+#lblServidor, #lblUsuario
+{
+    display:inline-block;
+	width:75px;
+}
+
+#lblBaseDatos, #lblPassword
+{
+    text-align:right;
+    display:inline-block;
+	width:95px;
+}
+
+#lblEnviarCorreo
+{
+    display:inline-block;
+	width:90px;
+}
+
+.caja235 {
+    margin: 1px;
+    padding: 2px;
+    width: 235px;
+}
+
+.caja170 {
+    margin: 1px;
+    padding: 2px;
+    width: 170px;
+}
+
+#lblProductoId
+{
+    display:inline-block;
+	width:265px;
+}
+
+#lblProductoDes
+{
+    display:inline-block;
+	width:310px;
+}
+
+#lblDescripcionMed, #lblNombreGenerico, #lblDescripcionMAT
+{
+    display:inline-block;
+	width:310px;
+}
+
+#lblUMMed, #lblUMMD
+{
+    display:inline-block;
+	width:52px;
+}
+
+.caja145 {
+    margin: 1px;
+    padding: 2px;
+    width: 145px;
+}
+
+#lblMarca, #lblModelo
+{
+    display:inline-block;
+	width:150px;
+}
+
+#thMarca, #thModelo
+{
+    width:150px;
+}
+/*
+#lblAutorizoIngJug
+{
+    display:inline-block;
+	width:80px;
+}*/
+
+.spanGeneral100
+{
+	width:100px;
+	display:inline-block;
+	margin:0;
+	float: none !important;
+}
+
+.spanGeneral150
+{
+	width:150px;
+	display:inline-block;
+	margin:0;
+	float: none !important;
+}
+
+.spanGeneral160
+{
+	width:150px;
+	display:inline-block;
+	margin:0;
+	float: none !important;
+}
+.spanGeneral170
+{
+	width:150px;
+	display:inline-block;
+	margin:0;
+	float: none !important;
+}
+.chkenviocartas
+{
+    margin-right:50px !important;
+}
+
+#thJugadorEnvioCartas
+{
+    width:300px;
+}
+#thfechaimpresion
+{
+    width:110px;
+    text-align:left;
+}
+#thCartaEstatusenviocartas,#thFechaenviocartas
+{
+    width:100px;
+    text-align:left;
+}
+#themailenviocartas,#thimprnenviocartas
+{
+    width:120px;
+}
+#btnGenerarEnvioCartasEnt
+{
+  float:right;
+}
+#divgenerarEnvioCartas
+{
+    width:785px;
+}
+#lblFormatoCartaEntrenamiento
+{
+    display:inline-block;
+	width:310px;
+}
+#lblFormatoCartaLiga
+{
+    display:inline-block;
+	width:195px;
+}
+
+.ui-datepicker-trigger
+{
+	margin: 2px 2px 0 !important;
+}
+
+#textFechaNacimiento
+{
+	width:190px !important;
+	margin: 2px 2px 0 !important;
+}
+
+#textFechaNacimientoLN
+{
+	width:175px !important;
+	margin: 2px 2px 0 !important;
+}
+.labelJugadoresLN
+{
+	color: #4C4C4C;
+    display: inline-block !important;
+    font-family: "PT Sans",Arial;
+    font-weight: normal;
+    margin-left: 14px;
+    width: 150px !important;
+}
+
+.labelCuerpoTecnicoLN
+{
+	color: #4C4C4C;
+    display: inline-block !important;
+    margin: 0px 8px 0px 10px;
+    width: 150px !important;
+}
+
+
+#DivcamposRegEva
+{
+    display:inline-block;
+    width:350px;
+    
+}
+
+.caja150
+{
+	padding:2px;
+	margin:1px;
+	width:150px;
+}
+#lblemailUser
+{
+    display:inline-block;
+	width:150px;
+}
+
+#lblPasswordConfirmUser
+{
+   display:inline-block;
+	width:148px; 
+    
+}
+#thNombreEmpleadoUser
+{
+width:250px;
+}
+#thCorreoUser
+{
+width:130px;
+}
+#lblnombreRes
+{
+ display:inline-block;   
+ width:50px;  
+ margin-left:30px;  
+}
+#SpanRespaldoG
+{
+display:inline-block;   
+width:250px;  
+margin-left:30px; 
+ }
+#btnGenerarResp
+{
+margin-left:30px !important;
+}
+#lblFechaRespIni
+{
+ display:inline-block;   
+ width:75px;   
+ margin-left:30px;   
+ }
+#lblFechaRespFin
+{
+ display:inline-block;   
+ width:70px;   
+ margin-left:30px;   
+ } 
+ 
+ #lblnombreBuscarRes
+{
+ display:inline-block;   
+ width:50px;  
+ margin-left:30px;  
+}
+#btnbuscarResp
+{
+  margin-left:30px !important;  
+}
+#DivBuscarResp
+{
+display:none;    
+}
+#gridRespaldos
+{
+    margin-left:30px !important; 
+    width:600px;
+}
+.RespaldosGrid
+{
+    font-size:11px !important;
+    font-family: Arial,Helvetica,sans-serif !important;
+	color: #4C4C4C  !important;
+}
+
+.thEstatusCartas
+{
+    width:110px;
+}
+#thAutorizdo
+{
+    width:100px;
+}
+
+#textMotivoBA
+{
+	width:530px;
+	height:90px;
+    resize:none !important;
+}
+
+#lblTipoListaActualEdit
+{
+    display:inline-block;
+	width:250px;
+}
+.cajaarea335
+{
+    padding:2px;
+ margin:1px;
+ width:335px;
+ resize: none;
+}
+.cajaarea372 {
+    margin: 1px;
+    padding: 2px;
+    width: 372px;
+    height:49px;
+    resize: none;
+}
+
+#divListJugadoresEquipo
+{
+    min-height:500px;
+}
+
+#DivMargenesCatFormatos label
+{
+    display:inline-block !important;
+    margin-right:13px;
+}
+
+#DivMargenesCatFormatos .combos
+{
+    margin-right:30px !important;
+}
+/*Registro de Line Up*/
+#lblFechaRegRLU, #lblResultadoRLU
+{
+	display:inline-block;
+	width:110px;
+}
+
+#lblEquipoRLU
+{
+    display:inline-block;
+	width:120px;
+	text-align:right;
+}
+#lblResultadoDos
+{
+    display:inline-block;
+	width:20px;
+	text-align:center;
+}
+#lblJugadorRLU
+{
+    display:inline-block;
+	width:260px;
+}
+#lblTipoPosicion
+{
+    display:inline-block;
+	width:205px;
+}
+#lblPosicion
+{
+    display:inline-block;
+	width:200px;
+}
+#lblResultadoIndividual
+{
+    display:inline-block;
+	width:120px;
+}
+#lblBateadorDesignadoRLU
+{
+    display:inline-block;
+	width:200px;
+}
+.th180
+{
+	width:180px !important;
+}
+.th90
+{
+	width:90px !important;
+    text-align:left;
+}
+#lblSueldoPesos, #lblSueldoDolares, #lblHospedajePesos, #lblHospedajeDolares
+{
+	display:inline-block;
+	width:120px;
+}
+.caja300
+{
+    margin: 1px !important;
+    padding: 2px !important;
+    display:inline-block;
+	width:300px;
+}
+
+#lblGastoViajeSJE, #lblGastoHospSJE {
+    display: inline-block;
+    width: 110px;
+}
+
+.caja150left
+{
+    margin: 1px !important;
+    padding-left: 100px !important;
+    display:inline-block;
+	width:300px;
+}
+
+#divPitchers div, #divPosicionesRLU div
+{
+    display:table-cell;
+}
+
+.div170px
+{
+    width:170px;
+}
+
+.div5px
+{
+    width:5px;
+}
+
+.div340px
+{
+    width:340px;
+}
+
+#chkGastoViajeSJE
+{
+    margin-left:40px;
+}
+#chkGastoHospSJE
+{
+    margin-left:90px;
+}
+
+#lblFildersRLU
+{
+    display: inline-block;
+    width: 350px;
+}
+
+#lblCatcherRLU
+{
+    display: inline-block;
+    width: 175px;
+}
+
+#lblJugadoresRoasterRLU
+{
+    display: inline-block;
+    width: 175px;
+}
+
+.caja455 {
+    margin: 1px !important;
+    padding: 2px !important;
+    width: 455px !important;
+}
+
