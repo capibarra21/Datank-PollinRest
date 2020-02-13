@@ -1,21 +1,51 @@
-from flask import Flask,render_template
+import os
+from flask import Flask,render_template,request
+from models import db, Polls, Topics, Options
+from flask_migrate import Migrate
 
-app = Flask(__name__)
+from api.api import api
 
-app.config.from_object('config')
+import config
+from celery import Celery
 
-#db.init_app('app')
-#db.create_all(app=app)
 
-@app.route('/')
+def make_celery(datank):
+    celery = Celery(
+        datank.import_name, backend=datank.config['CELERY_RESULT_BACKEND'],
+        broker=datank.config['CELERY_BROKER']
+    )
+    celery.conf.update(datank.config)
+    TaskBase = celery.Task
+
+    class ContextTask(TaskBase):
+        abstract = True
+
+        def __call__(self, *args, **kwargs):
+            with datank.app_context():
+                return TaskBase.__call__(self, *args, **kwargs)
+    celery.Task = ContextTask
+
+    return celery
+
+datank = Flask(__name__)
+datank.register_blueprint(api)
+
+datank.config.from_object('config')
+
+db.init_app(datank)
+#db.create_all(app=datank)
+migrate = Migrate(datank, db, render_as_batch=True)
+celery = make_celery(datank)
+
+@datank.route('/')
 
 
 def home():
     return render_template('index.html')
 
-@app.route('/Polls', methods=['GET'])
+@datank.route('/Polls', methods=['GET'])
 def polls():
     return render_template('Polls.html')
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    datank.run(debug=True)
