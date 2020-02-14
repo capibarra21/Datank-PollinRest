@@ -1,7 +1,7 @@
 from os import getenv
 
 from models import db, Polls, Topics, Options
-from flask import Blueprint, request, jsonify, session
+from flask import Blueprint, request, jsonify, session, json
 from datetime import datetime
 from config import SQLALCHEMY_DATABASE_URI
 from datetime import date
@@ -26,7 +26,7 @@ def api_polls():
 
         title = poll['title']
         options_query = lambda option: Options.query.filter(Options.name.like(option))
-
+        
         options = [Polls(option=Options(name=option))
                    if options_query(option).count() == 0
                    else Polls(option=options_query(option).first()) for option in poll['txtOptions']
@@ -47,11 +47,10 @@ def api_polls():
 
     else:
        
-        polls = Topics.query.filter_by(status=True).join(Polls).order_by(Topics.id.desc()).all()
+        polls = Topics.query.join(Polls).all()
         all_polls = {'Polls':  [poll.to_json() for poll in polls]}
 
         return jsonify(all_polls)
-
 
 @api.route('/polls/options')
 def api_polls_options():
@@ -62,6 +61,23 @@ def api_polls_options():
 
 
 @api.route('/poll/vote', methods=['PATCH'])
+def api_poll_vote():
+    poll = request.get_json()
+
+    poll_title, option = (poll['poll_title'], poll['option'])
+    join_tables = Polls.query.join(Topics).join(Options)
+
+    topic = Topics.query.filter_by(title=poll_title).first()
+
+    option = join_tables.filter(Topics.title.like(poll_title)).filter(Options.name.like(option)).first()
+    if option:
+        # increment vote_count by 1 if the option was found
+        option.vote_count += 1
+        db.session.commit()
+
+        return jsonify({'message': 'Thank you for voting'})
+
+    return jsonify({'message': 'option or poll was not found please try again'})
 
 
 @api.route('/poll/<poll_name>')

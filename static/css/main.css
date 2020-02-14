@@ -255,7 +255,7 @@ iframe {
     display: -ms-flexbox; /* IE10 */
     display: flex;
     width: 100%;
-    border-bottom: 1px solid #660000;
+    border-bottom: 1px solid #00b6ba;
 }
 
 .input100 {
@@ -323,7 +323,7 @@ iframe {
     }
 
 .has-val.input100 + .focus-input100::after {
-    color: #660000;
+    color: #00b6ba;
 }
 
 .has-val.input100 + .focus-input100::before {
@@ -372,7 +372,7 @@ iframe {
     min-width: 160px;
     height: 42px;
     border-radius: 21px;
-    background: #660000;
+    background: #00b6ba;
     z-index: 1;
     -webkit-transition: all 0.4s;
     -o-transition: all 0.4s;

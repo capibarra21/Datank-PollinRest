@@ -1,5 +1,5 @@
 import os
-from flask import Flask,render_template,request
+from flask import Flask,render_template,request,redirect
 from models import db, Polls, Topics, Options
 from flask_migrate import Migrate
 
@@ -33,7 +33,7 @@ datank.register_blueprint(api)
 datank.config.from_object('config')
 
 db.init_app(datank)
-#db.create_all(app=datank)
+db.create_all(app=datank)
 migrate = Migrate(datank, db, render_as_batch=True)
 celery = make_celery(datank)
 
@@ -47,5 +47,10 @@ def home():
 def polls():
     return render_template('Polls.html')
 
-if __name__ == '__main__':
-    datank.run(debug=True)
+
+@datank.route('/polls/<poll_name>')
+def poll(poll_name):
+
+    return render_template('index.html')
+
+

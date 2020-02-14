@@ -1,6 +1,6 @@
 function GetDynamicTextbox(value) {
 
-    return '<i class="glyphicon glyphicon-lock"></i><input type="text" class="input100" id="options" placeholder="Opcion:" value={this.state.txtOptions}   onChange={e => this.handleChange(e)}/> name="txtOptions" /><input type="button" onclick="RemoveTextBox(this)" value="Remover"style="width:100px;" />';
+    return '<i class="glyphicon glyphicon-lock"></i><input className="input100" type="text" name="txtOptions" id="txtOptions" placeholder="Opcion:" /><input type="button" onclick="RemoveTextBox(this)" value="Remover"style="width:100px;" />';
 
 }
 
