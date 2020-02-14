@@ -109,7 +109,7 @@ class PollForm extends React.Component{
         
         <div className="row">
           <h3 style={Align}>Live Preview</h3>
-          <LivePreview title={this.state.title} options={this.state.txtOptions} classContext={classContext} />
+          <LivePreview title={this.state.title} options={this.state.txtOptions} />
         </div>
       </div>
     );
@@ -121,12 +121,15 @@ class LivePreview extends React.Component{
   constructor(props) {
       super(props);
       this.state = {
-        selected_option : ''
+        selected_option : '', disabled: 0
       };
-
+    this.handleOptionChange = this.handleOptionChange.bind(this);
+    this.voteHandler = this.voteHandler.bind(this);
     }
   handleOptionChange(e) {
+
     this.setState({selected_option: e.target.value });
+      console.log(e.target.value);
   }
   
   voteHandler(e){
@@ -177,7 +180,7 @@ class LivePreview extends React.Component{
               {options}
               <br />
               <button type="submit" disabled={this.state.disabled}
-              className="btn btn-success btn-outline hvr-grow">Vote!</button>
+              className="btn btn-success btn-outline hvr-grow">Votar!</button>
               <small> {this.props.total_vote_count} votos</small>
              
             </form>
@@ -254,10 +257,11 @@ class LivePreviewProps extends React.Component{
       this.state = {
         selected_option : ''
       };
+      this.voteHandler = this.voteHandler.bind(this);
     }
     
     voteHandler(data){
-      
+      alert(JSON.stringify(data));
       var url =  origin + '/api/poll/vote'
       
       fetch(url, {
