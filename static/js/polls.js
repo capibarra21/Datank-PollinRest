@@ -17,7 +17,8 @@ class PollForm extends React.Component{
     this.state = {
       txtTema: ' ',
       option: ' ',
-      txtOptions: []
+      txtOptions: [],
+      all_options: []
     };
     this.handleChangeTema = this.handleChangeTema.bind(this);
     this.handleChangeOpcion = this.handleChangeOpcion.bind(this);
@@ -49,7 +50,7 @@ class PollForm extends React.Component{
     var txtOptions = this.state.txtOptions;
     
     var data = {title: title,
-      txtOptions: txtOptions.map(function(x){return x.name}),
+      txtOptions: txtOptions.map((x) => {return x.name}),
       
     };
     
@@ -70,6 +71,9 @@ class PollForm extends React.Component{
     
     var classContext = "container-login100"
     
+      var all_options = this.state.all_options.map((option) => {
+                        return(<option key={option.id} value={option.name} />)
+                      });
     return (
       
       <div>
@@ -89,15 +93,12 @@ class PollForm extends React.Component{
                     </div>
                     <div className="wrap-input100 validate-input" data-validate="Ingrese Opcion">
                       <i className="glyphicon glyphicon-lock"></i>
-                      <input className="input100" type="text" name="txtOptions" value={this.state.value}  onChange={this.handleChangeOpcion} id="txtOptions" placeholder="Opcion:" />
+                      <input className="input100" type="text" name="txtOptions" key= {this.state.value}  value={this.state.option ? this.state.option: ''}   onChange={this.handleChangeOpcion} id="txtOptions" placeholder="Opcion:" />
                     </div>
-                    <div className="wrap-input100 validate-input" data-validate="Ingrese Opcion">
-                      <i className="glyphicon glyphicon-lock"></i>
-                      <input className="input100" type="text" name="txtOptions"  value={this.state.value}   onChange={this.handleOptionAdd} id="txtOptions" placeholder="Opcion:" />
-                    </div>
+                    
                   </div>
                   <div className="container-login100-form-btn m-t-32">
-                    <input type="button" className="login100-form-btn" onClick={() => AddTextBox() } value="Añadir Opcion" />
+                    <input type="button" className="login100-form-btn" onClick={this.handleOptionAdd} value="Añadir Opcion" />
                     <input type="submit" className="login100-form-btn" id="btnEntrar" value="Guardar" />
                     
                   </div>
@@ -264,17 +265,25 @@ class LivePreviewProps extends React.Component{
       alert(JSON.stringify(data));
       var url =  origin + '/api/poll/vote'
       
-      fetch(url, {
+      let response = fetch(url, {
         method: 'PATCH',
         data: JSON.stringify(data),
-        redirect: 'follow',
         headers: {
           'Content-Type': 'application/json'
         }
-      }).then(res => res.json())
-        .catch(error => console.error('Error:', error))
-      this.setState({selected_option: ''});
-      this.props.loadPollsFromServer();
+      }).then(function(response) {
+       
+        return response.text();
+    })
+    .then(function(data) {
+        console.log('data = ', data);
+    })
+    .catch(function(err) {
+        console.error(err);
+    });
+     this.setState({selected_option: ''});
+        this.props.loadPollsFromServer();
+     
       
     }
     render(){

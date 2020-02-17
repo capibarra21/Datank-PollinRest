@@ -26,7 +26,7 @@ def api_polls():
 
         title = poll['title']
         options_query = lambda option: Options.query.filter(Options.name.like(option))
-        
+
         options = [Polls(option=Options(name=option))
                    if options_query(option).count() == 0
                    else Polls(option=options_query(option).first()) for option in poll['txtOptions']
@@ -62,6 +62,8 @@ def api_polls_options():
 
 @api.route('/poll/vote', methods=['PATCH'])
 def api_poll_vote():
+    
+    return jsonify({'message': 'Thank you for voting'});
     poll = request.get_json()
 
     poll_title, option = (poll['poll_title'], poll['option'])

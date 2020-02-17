@@ -16,7 +16,7 @@ class Base(db.Model):
 
 class Topics(Base):
     title = db.Column(db.String(250))
-    status = db.Column(db.Boolean, default=1) 
+    status = db.Column(db.Boolean, default=True) 
     def __repr__(self):
         return self.title
 
