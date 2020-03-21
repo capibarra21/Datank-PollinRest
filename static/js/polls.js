@@ -40,7 +40,7 @@ class PollForm extends React.Component{
       option: ' '
     });
   }
-  
+ 
   
   handleSubmit(e) {
     
@@ -62,9 +62,12 @@ class PollForm extends React.Component{
       headers: {
         'Content-Type': 'application/json'
       }
-    }).then(res => res.json())
+    }).then(res => alert(JSON.stringify(res)))
       .catch(error => console.error('Error:', error))
-      .then(response => alert('La encuesta se creo correctamente') );
+      .then(res => console.log(res.message))
+
+       this.props.history.push('/');
+
   }
   
   render(){
@@ -83,8 +86,8 @@ class PollForm extends React.Component{
               <div className="wrap-login100 p-t-30 p-b-50">
                 <span className="login100-form-title p-b-41">Bienvenido</span>
                 <div className="login100-form validate-form p-b-33 p-t-5" >
-                  <div className="logo">
-                    <img src="static/images/datank.png" height="100"/>
+                  <div  className="logo">
+                    <img href="/"  role="button" src="static/images/datank.png" height="100" />
                   </div>
                   <div id="divCont" >
                     <div className="wrap-input100 validate-input" data-validate="Ingrese tema">
@@ -109,7 +112,7 @@ class PollForm extends React.Component{
         </form>
         
         <div className="row">
-          <h3 style={Align}>Live Preview</h3>
+          <h3 style={Align}>Vista previa de la encuesta</h3>
           <LivePreview title={this.state.title} options={this.state.txtOptions} />
         </div>
       </div>
@@ -150,9 +153,9 @@ class LivePreview extends React.Component{
   var options = this.props.options.map((option) =>  {
      
       if(option.name) {
-       
+      
         // calculate progress bar percentage
-        var progress = Math.round((option.vote_count / this.props.total_vote_count) * 100) || 0
+        var progress = Math.round(option.vote_count / 1) || 0
         var current = {width: progress+"%"}
 
         return (
@@ -197,7 +200,8 @@ class AllPolls extends React.Component{
       super(props);
       this.state = {
         polls: {'Polls': []},
-        selected_option: '', disabled: 0};
+        header: '',
+        selected_option: ''};
       
       this.loadPollsFromServer = this.loadPollsFromServer.bind(this);
       this.componentDidMount = this.componentDidMount.bind(this);
@@ -245,7 +249,6 @@ class AllPolls extends React.Component{
         return (
           <div style={Align}>
             <h1>Poll not found</h1>
-            <p>You might be interested in these <a href="/">polls</a></p>
           </div>
         )
       }
@@ -262,32 +265,27 @@ class LivePreviewProps extends React.Component{
     }
     
     voteHandler(data){
-      alert(JSON.stringify(data));
+      
+
+      
       var url =  origin + '/api/poll/vote'
       
-      let response = fetch(url, {
+     fetch(url, {
         method: 'PATCH',
-        data: JSON.stringify(data),
+        body: JSON.stringify(data),
         headers: {
-          'Content-Type': 'application/json'
+            'Content-Type': 'application/json'
         }
-      }).then(function(response) {
-       
-        return response.text();
-    })
-    .then(function(data) {
-        console.log('data = ', data);
-    })
-    .catch(function(err) {
-        console.error(err);
-    });
-     this.setState({selected_option: ''});
-        this.props.loadPollsFromServer();
-     
+    }).then(res => {
+        console.log(res.message);
+    }).catch(err => err)
+      this.setState({selected_option: ''});
+      this.props.loadPollsFromServer()
+      
       
     }
     render(){
-      console.log(this.props.polls.Polls);
+      
       var polls = this.props.polls.Polls.map((poll) => {
         return (
           < LivePreview key={poll.title} title={poll.title} options={poll.options}

@@ -5,6 +5,7 @@ from flask import Blueprint, request, jsonify, session, json
 from datetime import datetime
 from config import SQLALCHEMY_DATABASE_URI
 from datetime import date
+from sqlalchemy import exc
 if getenv('APP_MODE') == 'PRODUCTION':
     from production_settings import SQLALCHEMY_DATABASE_URI
 
@@ -19,10 +20,10 @@ def api_polls():
       
         poll = request.get_json()
 
-        #
+        
         for key, value in poll.items():
             if not value:
-                return jsonify({'message': 'value for {} is empty'.format(key)})
+                return jsonify({'message': 'vacia'.format(key)})
 
         title = poll['title']
         options_query = lambda option: Options.query.filter(Options.name.like(option))
@@ -33,15 +34,17 @@ def api_polls():
                    ]
         
        
-        new_topic = Topics(title=title, options=options)
-
-        db.session.add(new_topic)
-        db.session.commit()
-
-   
-        from tasks import close_poll
-
-        close_poll(new_topic.id, SQLALCHEMY_DATABASE_URI)
+        
+        try:
+            new_topic = Topics(title=title, options=options)
+            db.session.add(new_topic)
+            db.session.commit()
+        except exc.SQLAlchemyError:
+            db.session.rollback()
+            raise
+        finally:
+            return jsonify({'message': 'Existe un problema con nuestra base de datos, favor de intentarlo mas tarde'})
+        
 
         return jsonify({'message': 'Encuesta creada correctamente'})
 
@@ -63,7 +66,8 @@ def api_polls_options():
 @api.route('/poll/vote', methods=['PATCH'])
 def api_poll_vote():
     
-    return jsonify({'message': 'Thank you for voting'});
+    
+    
     poll = request.get_json()
 
     poll_title, option = (poll['poll_title'], poll['option'])
@@ -73,13 +77,18 @@ def api_poll_vote():
 
     option = join_tables.filter(Topics.title.like(poll_title)).filter(Options.name.like(option)).first()
     if option:
-        # increment vote_count by 1 if the option was found
-        option.vote_count += 1
-        db.session.commit()
+        # incrementar el voto en 1 si encuentra la encuesta
+        try:
+            option.vote_count += 1
+            db.session.commit()
+        except exc.SQLAlchemyError:
+            db.session.rollback()
+            raise
+        finally:
+            return jsonify({'message': 'Existe un problema con nuestra base de datos, favor de intentarlo mas tarde'})
+        return jsonify({'message': 'Gracias por votar'})
 
-        return jsonify({'message': 'Thank you for voting'})
-
-    return jsonify({'message': 'option or poll was not found please try again'})
+    return jsonify({'message': 'La encuesta no fue encontrada'})
 
 
 @api.route('/poll/<poll_name>')
@@ -87,4 +96,4 @@ def api_poll(poll_name):
 
     poll = Topics.query.filter(Topics.title.like(poll_name)).first()
 
-    return jsonify({'Polls': [poll.to_json()]}) if poll else jsonify({'message': 'poll not found'})
+    return jsonify({'Polls': [poll.to_json()]}) if poll else jsonify({'message': 'encuesta no encontrada'})
