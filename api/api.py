@@ -41,12 +41,13 @@ def api_polls():
             db.session.commit()
         except exc.SQLAlchemyError:
             db.session.rollback()
+            return jsonify({'message': 'Existe un problema con nuestra base de datos, favor de intentarlo mas tarde'})
             raise
         finally:
-            return jsonify({'message': 'Existe un problema con nuestra base de datos, favor de intentarlo mas tarde'})
+            return jsonify({'message': 'Encuesta creada correctamente'})
         
 
-        return jsonify({'message': 'Encuesta creada correctamente'})
+        
 
     else:
        
@@ -83,10 +84,10 @@ def api_poll_vote():
             db.session.commit()
         except exc.SQLAlchemyError:
             db.session.rollback()
+            return jsonify({'message': 'Existe un problema con nuestra base de datos, favor de intentarlo mas tarde'})
             raise
         finally:
-            return jsonify({'message': 'Existe un problema con nuestra base de datos, favor de intentarlo mas tarde'})
-        return jsonify({'message': 'Gracias por votar'})
+            return jsonify({'message': 'Gracias por votar'})
 
     return jsonify({'message': 'La encuesta no fue encontrada'})
 

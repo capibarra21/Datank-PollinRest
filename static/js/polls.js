@@ -53,7 +53,7 @@ class PollForm extends React.Component{
       txtOptions: txtOptions.map((x) => {return x.name}),
       
     };
-    
+    var json;
     var url =  origin + '/api/polls'
     fetch(url, {
       method: 'POST',
@@ -62,10 +62,9 @@ class PollForm extends React.Component{
       headers: {
         'Content-Type': 'application/json'
       }
-    }).then(res => alert(JSON.stringify(res)))
-      .catch(error => console.error('Error:', error))
-      .then(res => console.log(res.message))
-
+    }).then(res => res.json())
+      .catch(err => err)
+      .then(response => alert(response.message)
        this.props.history.push('/');
 
   }
@@ -267,7 +266,7 @@ class LivePreviewProps extends React.Component{
     voteHandler(data){
       
 
-      
+      var json;
       var url =  origin + '/api/poll/vote'
       
      fetch(url, {
@@ -276,9 +275,10 @@ class LivePreviewProps extends React.Component{
         headers: {
             'Content-Type': 'application/json'
         }
-    }).then(res => {
-        console.log(res.message);
-    }).catch(err => err)
+    }).then(res => res.json())
+      .catch(err => err)
+      .then(response => alert(response.message))
+      
       this.setState({selected_option: ''});
       this.props.loadPollsFromServer()
       
